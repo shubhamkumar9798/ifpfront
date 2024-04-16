@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(assets/loginbg.png);
+    background-size: cover;
+}
+
+
+.container{
+    position: relative;
+    width: 700px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.container span{
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 6px;
+    background: rgb(252, 249, 249);
+    border-radius: 8px;
+    transform-origin: 128px;
+    transform: scale(2.2) rotate(calc(var(--i)*
+    (360deg /50)));
+    animation: animateblink 3s linear infinite;
+    animation-delay: calc(var(--i)*(3s/50));
+}
+@keyframes animateblink {
+    0% {
+        background: rgb(95, 92, 92);
+
+    }
+    25% {
+        background: rgb(115, 115, 118);
+
+    }
+}
+
+.loginbox{
+    position: relative;
+    width: 400px;
+    
+    
+}
+
+.loginbox form{
+    width: 100%;
+    padding: 10px 20px;
+}
+
+h2{
+    font-size: 2em;
+    color: rgb(236, 239, 239);
+    text-align: center;
+}
+
+.inputbox{
+    position: relative;
+    margin: 15px 0;
+}
+
+.inputbox input{
+    width: 200px;
+    height: 20px;
+    background: transparent;
+    border: 2px solid rgb(205, 205, 216);
+    outline: none;
+    border-radius: 10px;
+    font-size: 0.8em;
+    color:white ;
+    padding: 0 8px;
+    transition: .5s ease;
+}
+
+.inputbox input:focus,
+.inputbox input:valid {
+    border-color: rgb(234, 237, 237);
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%);
+    font-size: 0.8em;
+    color: white;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.inputbox input:focus~label,
+.inputbox input:valid~label {
+    top: 1px;
+    font-size: 0.8em;
+    background: rgb(214, 211, 211);
+    padding: 0 6px;
+}
+
+.forgot-pass{
+    margin: -15px 0 10px;
+    text-align: center;
+}
+
+.forgot-pass a{
+    font-size: 0.85em;
+    color: white;
+    text-decoration: none;
+}
+
+.forgot-pass a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: rgb(233, 236, 237);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: black;
+    font-weight: 600;
+}
+
+.signuplink {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.signuplink a{
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signuplink a:hover{
+    text-decoration: underline;
+
+}
+

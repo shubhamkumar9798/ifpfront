@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Unbounded", sans-serif;
+}
+.body{
+    background:black;
+    font-family: "Unbounded", sans-serif;
+}
+
+.main{
+    position: relative;
+    height: 700px;
+    background: url(assets/loginbg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: max(1200px, 100vw);
+    background-size:contain;
+    background-size: cover;
+    font-family: "Unbounded", sans-serif;
+}
+
+.main .box {
+    height: 700px;
+    width: 100%;
+    opacity: 0.69;
+    position: absolute;
+    top: 0;
+    background-color: black;   
+}
+
+nav {
+    max-width: 95vw;
+    justify-content: space-between;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+nav img {
+    width: 180px;
+    position: relative;
+    z-index: 10;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+    color: white;
+    background: transparent;
+    margin-right: 20px;
+    border: none;
+    font-size: 15px;
+
+}
+
+.live{
+    font-family: "Unbounded", sans-serif;
+    height: calc(100% - 280px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    padding: 60px 40px;
+    font-size: 70px;
+}
+
+.live> :nth-child(1) {
+    font-family: "Unbounded", sans-serif;
+    font-weight: bolder;
+    font-size: 70px;
+    text-align: left;
+    gap: 20px;
+}
+
+.live> :nth-child(2) {
+    font-family: "Unbounded", sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: left;
+    gap: 10px;
+}
+
+.live> :nth-child(3) {
+    font-family: "Unbounded", sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: left;
+}
+
+.first{
+    background-color: black;
+    width: 100%;
+}
+
+.first> :nth-child(1) {
+    font-weight: bolder;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    display: block;
+    padding-top: 50px;
+}
+
+.first> :nth-child(2) {
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: block;
+    
+}
+
+.first> :nth-child(3) {
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: block;
+}
+
+.first> :nth-child(4) {
+    font-weight: bolder;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: block;
+}

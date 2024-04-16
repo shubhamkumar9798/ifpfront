@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sleepstressify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <div class="main">
+        <nav>
+            <span>
+                <img width="180" src="assets/logo8.png" alt="Please wait" >
+            </span> 
+            <div>
+                <button class="btn">Home</button>
+                <button class="btn2">About</button>
+                <button class="btn3">Login</button>
+                <button class="btn3">Prediction</button>
+                <button class="btn3">Dashboard</button>
+
+            </div>
+
+        </nav>
+        <div class="box">
+            
+        </div>
+        <div class="live">
+            <span>Live stress free!!</span>
+
+            <span>Unlock the Power of Sleep Data,</span>
+            <span>Predict Stress with Precision!</span>
+        </div>
+    </div>
+
+    <div class="first">
+        <span>About</span>
+
+        <span>The website is an innovative platform that analyzes
+            stress levels by collecting and interpreting users' sleep data.
+            Utilizing advanced algorithms and sleep-tracking technology,
+            the website provides personalized insights into how sleep patterns
+            affect stress levels. Users can sync their sleep data from wearable devices
+            or manually input sleep metrics for analysis.
+        </span>
+
+        <span>The platform offers visualizations and reports that highlight trends in 
+            sleep quality, duration, and consistency. These insights enable users to
+            understand the impact of their sleep habits on stress and overall well-being.
+            By identifying patterns and triggers, the website empowers individuals to make 
+            informed lifestyle changes.
+        </span>
+
+        <span>
+            Graph between parameters of different stress level
+        </span>
+    </div>
+    <div style="padding-top: 5vh; text-align: center; background: black; color: white;"><h1>Snoring Range</h1></div>
+    <div style="padding: 5vw; display: flex; align-items: center; justify-content: center; background-color: black;">
+        <div id="top_x_div" style="width: 900px; height: 500px;"></div>
+    </div>
+    <div style="padding-top: 5vh; text-align: center; background: black; color: white;"><h1>respiration rate</h1></div>
+    <div style="padding: 5vw; display: flex; justify-content: center; background-color: black;">
+        <div id="top_x_div2" style="width: 900px; height: 500px;"></div>
+    </div>
+    <div style="padding-top: 5vh; text-align: center; background: black; color: white;"><h1>body temprature</h1></div>
+    <div style="padding: 5vw; display: flex; justify-content: center; background-color: black;">
+        <div id="top_x_div3" style="width: 900px; height: 500px;"></div>
+    </div>
+    <div style="padding-top: 5vh; text-align: center; background: black; color: white;"><h1>blood oxygen</h1></div>
+    <div style="padding: 5vw; display: flex; justify-content: center; background-color: black;">
+        <div id="top_x_div4" style="width: 900px; height: 500px;"></div>
+    </div>
+    <div style="padding-top: 5vh; text-align: center; background: black; color: white;"><h1>sleeping hours</h1></div>
+    <div style="padding: 5vw; display: flex; justify-content: center; background-color: black;">
+        <div id="top_x_div5" style="width: 900px; height: 500px;"></div>
+    </div>
+    
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawStuff);
+  
+        function drawStuff() {
+          var data = new google.visualization.arrayToDataTable([
+            ['Opening Move', 'Percentage'],
+            ["stress level 0 ", 117],
+            ["stress level 1", 91],
+            ["stress level 2", 46],
+            ["stress level 3", 10],
+            ['stress level 4', 26]
+          ]);
+          var data2 = new google.visualization.arrayToDataTable([
+          ['Opening Move', 'Percentage'],
+            ["stress level 0 ", 99],
+            ["stress level 1", 72],
+            ["stress level 2", 42],
+            ["stress level 3", 22],
+            ['stress level 4', 97]
+          ]);
+          var data3 = new google.visualization.arrayToDataTable([
+          ['Opening Move', 'Percentage'],
+          ["stress level 0 ", 96],
+            ["stress level 1", 85],
+            ["stress level 2", 96],
+            ["stress level 3", 104],
+            ['stress level 4', 74]
+          ]);
+          var data4 = new google.visualization.arrayToDataTable([
+          ['Opening Move', 'Percentage'],
+            ["stress level 0 ", 91],
+            ["stress level 1", 78],
+            ["stress level 2", 92],
+            ["stress level 3", 97],
+            ['stress level 4', 86]
+          ]);
+          var data5 = new google.visualization.arrayToDataTable([
+          ['Opening Move', 'Percentage'],
+            ["stress level 0 ", 8],
+            ["stress level 1", 9],
+            ["stress level 2", 11],
+            ["stress level 3", 23],
+            ['stress level 4', 5]
+          ]);
+  
+          var options = {
+            title: '',
+            width: 900,
+            legend: { position: 'none' },
+            chart: { title: '',
+                     subtitle: '' },
+            bars: 'vertical',
+            axes: {
+              x: {
+                0: { side: 'top', label: 'Percentage'} 
+              }
+            },
+            bar: { groupWidth: "90%" }
+          };
+  
+          var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+          chart.draw(data, options);
+          var chart2 = new google.charts.Bar(document.getElementById('top_x_div2'));
+          chart2.draw(data2, options);
+          var chart3 = new google.charts.Bar(document.getElementById('top_x_div3'));
+          chart3.draw(data3, options);
+          var chart4 = new google.charts.Bar(document.getElementById('top_x_div4'));
+          chart4.draw(data4, options);
+          var chart5 = new google.charts.Bar(document.getElementById('top_x_div5'));
+          chart5.draw(data5, options);
+        };
+      </script>
+    
+    
+</body>
+</html>
